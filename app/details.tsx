@@ -18,7 +18,7 @@ export default function(){
         async function loadPersonagem(){
             const dados = await FetchCharacters();
             setPersonagem(dados.characters)
-        }
+        }loadPersonagem();
     }, [] )
 
     return(
@@ -27,12 +27,12 @@ export default function(){
             <FlatList
                 data={personagem}
                 keyExtractor={item => {item.id.toString()} }
-                renderItem={({item})=>{
+                renderItem={({item})=>(
                     <View style={style.card}> 
                         <Image style={style.image} source={{uri:item.images[0]}}></Image>
                         <Text style={style.name}>{item.name}</Text>
                     </View>
-                }}
+                )}
             />
         </View>
     )
