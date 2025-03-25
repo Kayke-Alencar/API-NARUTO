@@ -7,7 +7,9 @@ export default function home(){
     return(
         <View style={{flex:1, justifyContent:"center", alignItems:"center"}}>
             <Text>Pagina Home</Text>
-            <Button title="Ver detalhes" onPress={()=>{router.push("/details")}}/>
+            <Button title="Ver personagens" onPress={()=>{router.push("/personagens")}}/>
+            {/*Use router é que faz a troca de tela*/}
+
         </View>
     )
 }
